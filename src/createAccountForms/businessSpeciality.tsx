@@ -4,6 +4,7 @@ import ProgressBar from './progressBar'
 import Mock from '../../Mock'
 import { useState } from 'react'
 import Buttons from '../components/buttons'
+import Link from 'next/link'
 
 interface BusinessSpecialtyProps {}
 const BusinessSpeciality: React.FC<BusinessSpecialtyProps> = () => {
@@ -225,15 +226,17 @@ const BusinessSpeciality: React.FC<BusinessSpecialtyProps> = () => {
           alignItems="center"
         >
           <Box mt="80px" w={['90%', '70%', '60%', '27%']}>
-            <Buttons
-              type="submit"
-              description="Go To Dashboard"
-              background="#FF9916"
-              color="#ffffff"
-              width="100%"
-              height="65px"
-              fontSize="14px"
-            />
+            <Link href="/setupconfirmation">
+              <Buttons
+                type="submit"
+                description="Go To Dashboard"
+                background="#FF9916"
+                color="#ffffff"
+                width="100%"
+                height="65px"
+                fontSize="14px"
+              />
+            </Link>
           </Box>
         </Box>
       </Box>

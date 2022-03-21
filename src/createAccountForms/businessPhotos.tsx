@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Buttons from '../components/buttons'
 import ImageUploading, { ImageListType } from 'react-images-uploading'
 import React from 'react'
+import Link from 'next/link'
 
 const BusinessPhotos = () => {
   const [selectedImages, setSelectedImages] = useState<any[]>([])
@@ -41,7 +42,7 @@ const BusinessPhotos = () => {
           alignItems="center"
           width="100%"
         >
-          <Box w={['80%', '50%', '50%', '44%']}>
+          <Box w={['50%', '50%', '50%', '44%']}>
             <ProgressBar businessName="Ichiraku Ramen Arigato" width="60%" />
 
             <Text
@@ -161,6 +162,16 @@ const BusinessPhotos = () => {
         </Box>
         {/* BUSINESS PHOTOS */}
         <Box mt="94px">
+          <Text
+            fontFamily="montserrat"
+            fontWeight="500"
+            fontSize="16px"
+            color="#666670"
+            mb="16px"
+            ml={['8%', '8%', '0%', '0%']}
+          >
+            Photos of your business
+          </Text>
           <Box
             display={{
               sm: 'flex',
@@ -179,15 +190,6 @@ const BusinessPhotos = () => {
             alignItems="center"
           >
             <Box ml={['8%', '8%', '0%', '0%']}>
-              <Text
-                fontFamily="montserrat"
-                fontWeight="500"
-                fontSize="16px"
-                color="#666670"
-                mb="16px"
-              >
-                Photos of your business
-              </Text>
               <Box display="flex" flexWrap="wrap">
                 {selectedImages &&
                   selectedImages.map((image, index) => {
@@ -251,15 +253,17 @@ const BusinessPhotos = () => {
               </label>
             </Box>
             <Box mt="80px" w={['90%', '70%', '60%', '25%']}>
-              <Buttons
-                type="submit"
-                description="Go To Dashboard"
-                background="#FF9916"
-                color="#ffffff"
-                width="100%"
-                height="65px"
-                fontSize="14px"
-              />
+              <Link href="/businessspecialty">
+                <Buttons
+                  type="submit"
+                  description="Go To Dashboard"
+                  background="#FF9916"
+                  color="#ffffff"
+                  width="100%"
+                  height="65px"
+                  fontSize="14px"
+                />
+              </Link>
             </Box>
           </Box>
         </Box>

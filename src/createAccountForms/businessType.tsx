@@ -4,6 +4,7 @@ import Buttons from '../components/buttons'
 import Pic from '../../images/cook.png'
 import Mock from '../../Mock'
 import ProgressBar from './progressBar'
+import Link from 'next/link'
 
 const BusinessInfo = () => {
   const [clickedIndex, setClickedIndex] = useState<any>({})
@@ -154,16 +155,18 @@ const BusinessInfo = () => {
           </Grid>
 
           <Box mt="67px" mx="auto">
-            <Buttons
-              type="submit"
-              color="#ffffff"
-              width="180px"
-              height="65px"
-              fontSize="14px"
-              fontFamily="montserrat"
-              description="Proceed"
-              background="#FF9916"
-            />
+            <Link href="/businesssocials">
+              <Buttons
+                type="submit"
+                color="#ffffff"
+                width="180px"
+                height="65px"
+                fontSize="14px"
+                fontFamily="montserrat"
+                description="Proceed"
+                background="#FF9916"
+              />
+            </Link>
           </Box>
         </Box>
       </Box>

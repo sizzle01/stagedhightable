@@ -14,6 +14,7 @@ import Buttons from '../components/buttons'
 import * as Yup from 'yup'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import ProgressBar from './progressBar'
+import Link from 'next/link'
 
 const BusinesSocialsForm = () => {
   const urlValidator = Yup.string()
@@ -351,15 +352,17 @@ const BusinesSocialsForm = () => {
             {/* Restaurant Description field */}
 
             <Box mt="4%">
-              <Buttons
-                color="#ffffff"
-                type="submit"
-                description="Proceed"
-                background="#FF9916"
-                width="330px"
-                height="65px"
-                fontSize="14px"
-              />
+              <Link href="/businessphotos">
+                <Buttons
+                  color="#ffffff"
+                  type="submit"
+                  description="Proceed"
+                  background="#FF9916"
+                  width="330px"
+                  height="65px"
+                  fontSize="14px"
+                />
+              </Link>
             </Box>
           </Box>
         </Box>

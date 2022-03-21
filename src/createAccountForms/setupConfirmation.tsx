@@ -4,7 +4,7 @@ import Buttons from '../components/buttons'
 import ProgressBar from './progressBar'
 import Mock from '../../Mock'
 
-const confirmationImage = './coffee.png'
+const confirmationImage = './success.png'
 
 const SetupConfirmation = () => {
   return (
@@ -33,9 +33,9 @@ const SetupConfirmation = () => {
         <Box
           borderRadius="10px"
           border="1px solid #FF9916"
-          w={['90%', '80%', '64%', '34%']}
+          w={['90%', '60%', '64%', '34%']}
         >
-          <Image src={confirmationImage} alt="business image" />
+          <Image src={confirmationImage} width="100%" alt="business image" />
         </Box>
         <Text
           fontFamily="montserrat"

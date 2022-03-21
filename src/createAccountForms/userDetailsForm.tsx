@@ -4,6 +4,7 @@ import { Box, FormLabel, Text } from '@chakra-ui/react'
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import * as Yup from 'yup'
 import { CheckIcon } from '@chakra-ui/icons'
+import Link from 'next/link'
 const UserDetailsForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -142,15 +143,17 @@ const UserDetailsForm = () => {
               </Box>
             </Box>
             <Box mt={['66px', '80px', '100px', '124px']}>
-              <Buttons
-                color="#ffffff"
-                type="submit"
-                description="Proceed"
-                background="#FF9916"
-                width="330px"
-                height="65px"
-                fontSize="14px"
-              />
+              <Link href="/businessdetails">
+                <Buttons
+                  color="#ffffff"
+                  type="submit"
+                  description="Proceed"
+                  background="#FF9916"
+                  width="330px"
+                  height="65px"
+                  fontSize="14px"
+                />
+              </Link>
             </Box>
           </Box>
         </form>

@@ -5,6 +5,7 @@ import { Formik, useFormik, yupToFormErrors } from 'formik'
 import React, { useState } from 'react'
 import * as Yup from 'yup'
 import { CheckIcon } from '@chakra-ui/icons'
+import Link from 'next/link'
 
 const strength = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
 const BusinessDetailForm = () => {
@@ -36,9 +37,7 @@ const BusinessDetailForm = () => {
         },
       ),
     }),
-    onSubmit: (values) => {
-      console.log(formik.values)
-    },
+    onSubmit: (values) => {},
   })
   console.log(formik.initialValues.businessName)
   return (
@@ -289,15 +288,17 @@ const BusinessDetailForm = () => {
           </Box>
 
           <Box mt="5%">
-            <Buttons
-              type="submit"
-              description="Proceed"
-              color="#ffffff"
-              background="#FF9916"
-              width="318px"
-              height="65px"
-              fontSize="14px"
-            />
+            <Link href="/confirmemail">
+              <Buttons
+                type="submit"
+                description="Proceed"
+                color="#ffffff"
+                background="#FF9916"
+                width="318px"
+                height="65px"
+                fontSize="14px"
+              />
+            </Link>
           </Box>
         </Box>
       </form>
