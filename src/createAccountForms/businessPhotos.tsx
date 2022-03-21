@@ -41,7 +41,7 @@ const BusinessPhotos = () => {
           alignItems="center"
           width="100%"
         >
-          <Box w={['50%', '50%', '50%', '44%']}>
+          <Box w={['80%', '50%', '50%', '44%']}>
             <ProgressBar businessName="Ichiraku Ramen Arigato" width="60%" />
 
             <Text
@@ -161,16 +161,6 @@ const BusinessPhotos = () => {
         </Box>
         {/* BUSINESS PHOTOS */}
         <Box mt="94px">
-          <Text
-            fontFamily="montserrat"
-            fontWeight="500"
-            fontSize="16px"
-            color="#666670"
-            mb="16px"
-            ml={['8%', '8%', '0%', '0%']}
-          >
-            Photos of your business
-          </Text>
           <Box
             display={{
               sm: 'flex',
@@ -189,6 +179,15 @@ const BusinessPhotos = () => {
             alignItems="center"
           >
             <Box ml={['8%', '8%', '0%', '0%']}>
+              <Text
+                fontFamily="montserrat"
+                fontWeight="500"
+                fontSize="16px"
+                color="#666670"
+                mb="16px"
+              >
+                Photos of your business
+              </Text>
               <Box display="flex" flexWrap="wrap">
                 {selectedImages &&
                   selectedImages.map((image, index) => {

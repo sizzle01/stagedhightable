@@ -10,7 +10,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ businessName, width }) => {
     <div>
       <Box
         mb={['0px', '20%', '56px', '56px']}
-        mt={['-20%', '-17%', '-25%', '-25%']}
+        mt={['-20%', '-17%', '-25%', '-20%']}
         w={['90%', '70%', '100%', '100%']}
       >
         <Text
