@@ -262,6 +262,7 @@ const BusinessPhotos = () => {
                   width="100%"
                   height="65px"
                   fontSize="14px"
+                  _focus={{ boxShadow: 'none' }}
                 />
               </Link>
             </Box>

@@ -94,5 +94,23 @@ export default {
         name: 'Video games'
       },
   ],
+
+   tabItems : [
+    {
+      option: 'point of sale',
+    },
+    {
+      option: 'inventory management',
+    },
+    {
+      option: 'order manegement',
+    },
+    {
+      option: 'point of sale',
+    },
+    {
+      option: 'Ticketing',
+    },
+  ]
 };
 

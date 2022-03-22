@@ -1,8 +1,10 @@
 import React from 'react'
 import { Box, Button, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useMediaQuery } from '@chakra-ui/react'
 
 const HeroSection = () => {
+  const [isLessThan768] = useMediaQuery('(max-width: 768px)')
   return (
     <div>
       <Box
@@ -11,86 +13,71 @@ const HeroSection = () => {
         alignItems="center"
         bg=" #FFFFFF;"
         pb="5%"
+        backgroundSize="cover"
+        backgroundPosition="center center"
+        backgroundRepeat="no-repeat"
+        backgroundImage={isLessThan768 ? "url('./Heroimage.png')" : null}
+        // backgroundImage="url('./Heroimage.png')"
       >
         <Box d="flex" w="88%" justifyContent="space-between">
-          <Box mt="10%" w={['40%', '35%', '40%', '33%']} mb="16px">
-            <Text
-              fontFamily="poppins"
-              fontSize="72px"
-              fontWeight="700"
-              color="#000000"
-              lineHeight="108px"
-            >
-              Your Business is now Digital
-            </Text>
-            <Text
-              fontFamily="montserrat"
-              fontSize="18px"
-              fontWeight="400"
-              color="#000000"
-              mb="36px"
-            >
-              We blend insight and strategy to create digital products for
-              forward thinking organisations.
-            </Text>
-            <Link href="/userdetails">
-              <Button
+          <Box
+            mt={['10%', '10%', '7%', '10%']}
+            w={['90%', '80%', '55%', '45%']}
+            mb="16px"
+          >
+            <Box width="100%">
+              <Text
+                fontFamily="poppins"
+                fontSize={['32px', '35px', '50px', '72px']}
+                fontWeight="700"
+                color="#000000"
+                lineHeight={['48px', '50px', '70px', '108px']}
+              >
+                Your Business is now Digital
+              </Text>
+              <Text
                 fontFamily="montserrat"
-                fontSize="18px"
-                fontWeight="600"
-                color="#ffffff"
-                w="180px"
-                h="70px"
-                bg="#FF9916"
-                borderRadius="10px"
+                fontSize={['16px', '16px', '18px', '18px']}
+                fontWeight="400"
+                color="#000000"
+                mb="36px"
+                mt="10px"
+                w={['90%', '80%', '69%', '60%']}
               >
-                Get Started
-              </Button>
-            </Link>
-          </Box>
-          <Box w="57%" mt="38px" position="relative">
-            <Box d="flex">
-              <Box
-                w={['40%', '35%', '25%', '33%']}
-                position="absolute"
-                left={['40%', '35%', '25%', '10%']}
-                top=""
-              >
-                <Image src="./cone.png" width="100%" alt="heroimage" />
-              </Box>
-              <Box
-                w={['40%', '35%', '25%', '20%']}
-                position="absolute"
-                left={['40%', '35%', '25%', '24%']}
-                top="2%"
-              >
-                <Image src="./pool.png" width="100%" alt="heroimage" />
-              </Box>
-              <Box
-                w={['40%', '35%', '25%', '26%']}
-                position="absolute"
-                left={['40%', '35%', '25%', '30%']}
-                top={['40%', '35%', '60%', '40%']}
-              >
-                <Image src="./restaurant.png" width="100%" alt="heroimage" />
-              </Box>
-              <Box
-                w={['40%', '35%', '25%', '28%']}
-                position="absolute"
-                left={['40%', '35%', '25%', '50%']}
-                top="4%"
-              >
-                <Image src="./building.png" width="100%" alt="heroimage" />
-              </Box>
-              <Box
-                w={['40%', '35%', '30%', '32%']}
-                position="absolute"
-                left={['40%', '35%', '25%', '60%']}
-                top={['40%', '35%', '50%', '60%']}
-              >
-                <Image src="./room.png" width="100%" alt="heroimage" />
-              </Box>
+                We blend insight and strategy to create digital products for
+                forward thinking organisations.
+              </Text>
+              <Link href="/userdetails">
+                <Button
+                  _focus={{ boxShadow: 'none' }}
+                  fontFamily="montserrat"
+                  fontSize={['18px', '18px', '18px', '18px']}
+                  fontWeight="600"
+                  color="#ffffff"
+                  w={['300px', '120px', '150px', '180px']}
+                  h={['70px', '50px', '70px', '70px']}
+                  bg="#FF9916"
+                  borderRadius="10px"
+                  ml={['6%', '0%', '0%', '0%']}
+                >
+                  Get Started
+                </Button>
+              </Link>
             </Box>
+          </Box>
+          <Box
+            display={{
+              sm: 'none',
+              md: 'block',
+              lg: 'block',
+              xl: 'block',
+              base: 'none',
+            }}
+            w={['0%', '0%', '53%', '47%']}
+            mt="38px"
+            position="relative"
+          >
+            <Image src="./heroimage.png" w="100%" />
           </Box>
         </Box>
       </Box>

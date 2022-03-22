@@ -297,6 +297,7 @@ const BusinessDetailForm = () => {
                 width="318px"
                 height="65px"
                 fontSize="14px"
+                _focus={{ boxShadow: 'none' }}
               />
             </Link>
           </Box>

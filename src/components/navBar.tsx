@@ -1,4 +1,5 @@
 import { Box, Button, Image } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import { useMediaQuery } from '@chakra-ui/react'
 import Link from 'next/link'
 const menuLinks = [
@@ -102,6 +103,7 @@ const NavBar = () => {
                 fontWeight="500"
                 color="#ffffff"
                 bg="#FF9916"
+                _focus={{ boxShadow: 'none' }}
               >
                 Get Started
               </Button>

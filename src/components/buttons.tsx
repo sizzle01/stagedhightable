@@ -29,6 +29,7 @@ const Buttons: React.FC<ButtonsProps> = ({
 }) => {
   return (
     <Button
+      _focus={{ boxShadow: 'none' }}
       style={{
         color,
         width,
