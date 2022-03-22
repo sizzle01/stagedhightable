@@ -106,7 +106,6 @@ const BusinessTools = () => {
                             bg:
                               'linear-gradient(90deg, #FF9916 0%, #FF8A00 100%, #8E4D00 100%)',
                           }}
-                          outline="none"
                         >
                           {item.option}
                         </Tab>
@@ -128,7 +127,7 @@ const BusinessTools = () => {
                   base: 'left',
                 }}
               >
-                <TabPanels index={0}>
+                <TabPanels>
                   {toolData.map((data, index) => {
                     return (
                       <TabPanel

@@ -13,10 +13,10 @@ const HeroSection = () => {
         alignItems="center"
         bg=" #FFFFFF;"
         pb="5%"
-        backgroundSize="cover"
-        backgroundPosition="center center"
-        backgroundRepeat="no-repeat"
-        backgroundImage={isLessThan768 ? "url('./Heroimage.png')" : null}
+        // backgroundSize="cover"
+        // backgroundPosition="center center"
+        // backgroundRepeat="no-repeat"
+        // backgroundImage={isLessThan768 ? "url('./Heroimage.png')" : null}
         // backgroundImage="url('./Heroimage.png')"
       >
         <Box d="flex" w="88%" justifyContent="space-between">

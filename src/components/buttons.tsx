@@ -13,6 +13,7 @@ interface ButtonsProps {
   leftIcon?: React.ReactElement
   colorScheme?: string
   fontFamily?: string
+  _focus?: any
 }
 const Buttons: React.FC<ButtonsProps> = ({
   description,

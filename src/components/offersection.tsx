@@ -69,7 +69,6 @@ const OfferSection = () => {
               fontWeight="400"
               color="#000000"
               lineHeight="22px"
-              textAlign="left"
               mb="73px"
               textAlign={{
                 sm: 'left',
