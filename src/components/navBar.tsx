@@ -30,24 +30,24 @@ const NavBar = () => {
         >
           {/* Hamburger Menu */}
           {isLessThan900 ? (
-            <Box w="40px" cursor="pointer" height="40px" mt="22px">
+            <Box maxWidth="40px" cursor="pointer" height="40px" mt="22px">
               <Box
+                maxWidth="40px"
                 h="2px"
-                w="100%"
                 bg="#212121"
                 borderRadius="10px"
                 mb="8px"
               ></Box>
               <Box
+                maxWidth="40px"
                 h="2px"
-                w="100%"
                 bg="#212121"
                 borderRadius="10px"
                 mb="8px"
               ></Box>
               <Box
+                maxWidth="40px"
                 h="2px"
-                w="100%"
                 bg="#212121"
                 borderRadius="10px"
                 mb="8px"
