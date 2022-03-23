@@ -77,7 +77,7 @@ const HeroSection = () => {
             mt="38px"
             position="relative"
           >
-            <Image src="./heroimage.png" w="100%" />
+            <Image src="./Heroimage.png" w="100%" />
           </Box>
         </Box>
       </Box>
