@@ -4,6 +4,7 @@ import HeroSection from '../components/heroSection'
 import NavBar from '../components/navBar'
 import OfferSection from '../components/offersection'
 import BusinessTools from '../components/businessTools'
+import AboutUs from '../components/aboutUs'
 
 const LandingPage = () => {
   return (
@@ -19,6 +20,9 @@ const LandingPage = () => {
       </Box>
       <Box>
         <BusinessTools />
+      </Box>
+      <Box>
+        <AboutUs />
       </Box>
     </div>
   )

@@ -131,6 +131,7 @@ const BusinessTools = () => {
                   {toolData.map((data, index) => {
                     return (
                       <TabPanel
+                        mt={['0%', '0%', '-2%', '-7%']}
                         key={index}
                         w="100%"
                         display="flex"
