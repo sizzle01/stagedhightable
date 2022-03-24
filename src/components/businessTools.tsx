@@ -1,4 +1,4 @@
-import { Box, Button, Image, Text } from '@chakra-ui/react'
+import { Box, Image, Text } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import Mock from '../../Mock'
 import React from 'react'

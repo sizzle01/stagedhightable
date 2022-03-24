@@ -1,7 +1,6 @@
 import React from 'react'
 import CreateAccount from '../components/createAccount'
 import BusinessInfo from '../createAccountForms/businessType'
-import ProgressBar from '../createAccountForms/progressBar'
 
 const Businesstype = () => {
   return (

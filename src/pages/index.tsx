@@ -5,6 +5,9 @@ import NavBar from '../components/navBar'
 import OfferSection from '../components/offersection'
 import BusinessTools from '../components/businessTools'
 import AboutUs from '../components/aboutUs'
+import Testimonial from '../components/testimonial'
+import BusinessSolutions from '../components/businessSolutions'
+import Address from '../components/address'
 
 const LandingPage = () => {
   return (
@@ -23,6 +26,15 @@ const LandingPage = () => {
       </Box>
       <Box>
         <AboutUs />
+      </Box>
+      <Box>
+        <Testimonial />
+      </Box>
+      <Box>
+        <BusinessSolutions />
+      </Box>
+      <Box>
+        <Address />
       </Box>
     </div>
   )
