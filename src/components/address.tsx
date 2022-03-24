@@ -63,6 +63,7 @@ const Address = () => {
           ></iframe>
         </Box>
         <Box
+          mr={['11%', '50%', '00%', '0%']}
           display="flex"
           flexDirection={{
             sm: 'column',
@@ -70,13 +71,6 @@ const Address = () => {
             lg: 'row',
             xl: 'row',
             base: 'column',
-          }}
-          alignItems={{
-            sm: 'left',
-            md: 'center',
-            lg: 'center',
-            xl: 'center',
-            base: 'left',
           }}
         >
           {addressInformation.map((address, index) => {
