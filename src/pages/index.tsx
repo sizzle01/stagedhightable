@@ -8,6 +8,7 @@ import AboutUs from '../components/aboutUs'
 import Testimonial from '../components/testimonial'
 import BusinessSolutions from '../components/businessSolutions'
 import Address from '../components/address'
+import ContactUs from '../components/contactUs'
 
 const LandingPage = () => {
   return (
@@ -35,6 +36,9 @@ const LandingPage = () => {
       </Box>
       <Box>
         <Address />
+      </Box>
+      <Box>
+        <ContactUs />
       </Box>
     </div>
   )

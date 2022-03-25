@@ -1,9 +1,7 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { Box, Button, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useMediaQuery } from '@chakra-ui/react'
-
-// const bg = "url('./mobilebg.png')" as React.CSSProperties
 
 const HeroSection = () => {
   const [isLessThan768] = useMediaQuery('(max-width: 768px)')

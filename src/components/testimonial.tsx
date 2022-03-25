@@ -52,10 +52,24 @@ const Testimonial = () => {
                     fontSize={['22px', '36px', '53px', '55px']}
                     fontWeight="700"
                     color="#000000"
-                    mb="50px"
                   >
                     Our Core Values
                   </Text>
+                  <Box display="flex" mb="50px">
+                    <Box
+                      w={['70px', '150px', '150px', '150px']}
+                      h="3px"
+                      bg="#FF9916"
+                      borderRadius="10px"
+                    ></Box>
+                    <Box
+                      ml="20px"
+                      w={['25px', '50px', '50px', '50px']}
+                      h="3px"
+                      bg="#FF9916"
+                      borderRadius="10px"
+                    ></Box>
+                  </Box>
                 </Box>
                 <Text
                   fontFamily="montserrat"
