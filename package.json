@@ -11,7 +11,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
+    "@chakra-ui/core": "1.0.0-rc.8",
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.5",
     "@emotion/core": "^11.0.0",
@@ -23,7 +23,7 @@
     "emotion-theming": "^11.0.0",
     "eslint-plugin-react": "^7.29.4",
     "formik": "^2.2.9",
-    "framer-motion": "^6",
+    "framer-motion": "latest",
     "google-maps-react": "^2.0.6",
     "heroku": "^7.60.0",
     "netlify-cli": "^9.13.3",

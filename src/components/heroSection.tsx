@@ -3,7 +3,7 @@ import { Box, Button, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useMediaQuery } from '@chakra-ui/react'
 
-const bg = "url('./mobilebg.png')"
+// const bg = "url('./mobilebg.png')" as React.CSSProperties
 
 const HeroSection = () => {
   const [isLessThan768] = useMediaQuery('(max-width: 768px)')
@@ -15,14 +15,14 @@ const HeroSection = () => {
         alignItems="center"
         bg=" #FFFFFF;"
         pb="5%"
-        // backgroundSize="cover"
-        // backgroundPosition="center center"
-        // backgroundRepeat="no-repeat"
-        // backgroundImage={isLessThan768 ? bg : null}
+        backgroundSize="cover"
+        backgroundPosition="center center"
+        backgroundRepeat="no-repeat"
+        backgroundImage={isLessThan768 ? "url('./mobilebg.png')" : null}
       >
         <Box d="flex" w="88%" justifyContent="space-between">
           <Box
-            mt={['83%', '10%', '7%', '10%']}
+            mt={['83%', '50%', '7%', '10%']}
             w={['90%', '80%', '55%', '45%']}
             mb="16px"
           >

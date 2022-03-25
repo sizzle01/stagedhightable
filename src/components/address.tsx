@@ -1,10 +1,9 @@
 import { Box, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import { GoogleMap, Marker } from 'react-google-maps'
 
 const addressInformation = [
   {
-    icon: './point.png',
+    icon: './email.png',
     info: 'hightable@htbusiness.com',
   },
   {
@@ -12,8 +11,8 @@ const addressInformation = [
     info: 'Elizabeth St. Melbourne, VI, Lagos',
   },
   {
-    icon: './point.png',
-    info: '+234 123 456 789, +033 1212-574-864',
+    icon: './phone.png',
+    info: '+234 123 456 789, \n+033 1212-574-864',
   },
 ]
 const Address = () => {
@@ -75,7 +74,7 @@ const Address = () => {
         >
           {addressInformation.map((address, index) => {
             return (
-              <Box mr="30px" mb="38px" display="flex" key="index">
+              <Box mr="30px" mb="38px" display="flex" key={index}>
                 <Box
                   display="flex"
                   flexDirection="column"
