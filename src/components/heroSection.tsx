@@ -16,7 +16,14 @@ const HeroSection = () => {
         backgroundSize="cover"
         backgroundPosition="center center"
         backgroundRepeat="no-repeat"
-        backgroundImage={isLessThan768 ? "url('./mobilebg.png')" : null}
+        backgroundImage={{
+          sm: "url('./mobilebg.png')",
+          md: 'none',
+          lg: 'none',
+          xl: 'none',
+          base: "url('./mobilebg.png')",
+        }}
+        // backgroundImage={isLessThan768 ? "url('./mobilebg.png')" : null}
       >
         <Box d="flex" w="88%" justifyContent="space-between">
           <Box

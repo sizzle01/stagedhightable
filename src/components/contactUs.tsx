@@ -44,24 +44,34 @@ const ContactUs = () => {
         alignItems="center"
         mt={['15px', '15px', '90px', '50px']}
       >
-        {isGreaterThan750 ? null : (
-          <Box bg="#FFF4E7" w="70%" paddingY="80px">
-            <Text
-              fontFamily="DM Serif Display"
-              fontSize={['30px', '44px', '50px', '72px']}
-              fontWeight="400"
-              color="#000000"
-              ml="11%"
-              mb="36px"
-              mt="10px"
-            >
-              Contact us
-            </Text>
-            <Box position="absolute" bottom="0">
-              <Image src="./group1.png" />
-            </Box>
+        <Box
+          bg="#FFF4E7"
+          w="70%"
+          paddingY="80px"
+          display={{
+            sm: 'none',
+            md: 'block',
+            lg: 'block',
+            xl: 'block',
+            base: 'none',
+          }}
+        >
+          <Text
+            fontFamily="DM Serif Display"
+            fontSize={['30px', '44px', '50px', '72px']}
+            fontWeight="400"
+            color="#000000"
+            ml="11%"
+            mb="36px"
+            mt="10px"
+          >
+            Contact us
+          </Text>
+          <Box position="absolute" bottom="0">
+            <Image src="./group1.png" />
           </Box>
-        )}
+        </Box>
+
         <Box
           w={['90%', '90%', '55%', '55%']}
           bg="#ffffff"

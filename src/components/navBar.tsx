@@ -1,5 +1,4 @@
-import { Box, Button, Image } from '@chakra-ui/react'
-import { useMediaQuery } from '@chakra-ui/react'
+import { Box, Button, Flex, Image } from '@chakra-ui/react'
 import Link from 'next/link'
 const menuLinks = [
   {
@@ -16,7 +15,6 @@ const menuLinks = [
   },
 ]
 const NavBar = () => {
-  const [isLessThan900] = useMediaQuery('(max-width: 990px)')
   return (
     <div>
       <Box display="flex" flexDirection="column" alignItems="center">
@@ -27,8 +25,6 @@ const NavBar = () => {
           alignItems="center"
           justifyContent="space-between"
         >
-          {/* Hamburger Menu */}
-          {/* {isLessThan900 ? () : null} */}
           <Box
             maxWidth="40px"
             cursor="pointer"
@@ -129,6 +125,7 @@ const NavBar = () => {
             <Box></Box>
           </Box>
         </Box>
+        <Flex></Flex>
       </Box>
     </div>
   )
