@@ -7,8 +7,10 @@ import { Formik, useFormik, yupToFormErrors } from 'formik'
 import * as Yup from 'yup'
 
 const ContactUs = () => {
-  const [isGreaterThan750] = useMediaQuery('(min-width: 750px)')
-  const [isLessThan765] = useMediaQuery('(max-width: 765px)')
+  const [isGreaterThan750, isLessThan765] = useMediaQuery([
+    '(max-width: 750px)',
+    '(max-width: 765px)',
+  ])
 
   const formik = useFormik({
     initialValues: {
@@ -40,9 +42,9 @@ const ContactUs = () => {
           base: 'column',
         }}
         alignItems="center"
-        mt="50px"
+        mt={['15px', '15px', '90px', '50px']}
       >
-        {isGreaterThan750 ? (
+        {isGreaterThan750 ? null : (
           <Box bg="#FFF4E7" w="70%" paddingY="80px">
             <Text
               fontFamily="DM Serif Display"
@@ -59,7 +61,7 @@ const ContactUs = () => {
               <Image src="./group1.png" />
             </Box>
           </Box>
-        ) : null}
+        )}
         <Box
           w={['90%', '90%', '55%', '55%']}
           bg="#ffffff"
@@ -123,6 +125,7 @@ const ContactUs = () => {
                     width="100%"
                     value={formik.values.email}
                     onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                   />
                   {formik.errors.email ? (
                     <p style={{ color: 'red' }}>{formik.errors.email}</p>
@@ -138,6 +141,7 @@ const ContactUs = () => {
                     width="100%"
                     value={formik.values.Name}
                     onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                   />
                   {formik.errors.Name ? (
                     <p style={{ color: 'red' }}>{formik.errors.Name}</p>
@@ -150,6 +154,7 @@ const ContactUs = () => {
                   name="message"
                   value={formik.values.message}
                   onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
                 />
                 {formik.errors.message ? (
                   <p style={{ color: 'red' }}>{formik.errors.message}</p>

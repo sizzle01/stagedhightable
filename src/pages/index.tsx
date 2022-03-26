@@ -9,6 +9,7 @@ import Testimonial from '../components/testimonial'
 import BusinessSolutions from '../components/businessSolutions'
 import Address from '../components/address'
 import ContactUs from '../components/contactUs'
+import Footer from '../components/footer'
 
 const LandingPage = () => {
   return (
@@ -39,6 +40,9 @@ const LandingPage = () => {
       </Box>
       <Box>
         <ContactUs />
+      </Box>
+      <Box>
+        <Footer />
       </Box>
     </div>
   )
