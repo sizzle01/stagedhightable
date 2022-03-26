@@ -18,7 +18,7 @@ const addressInformation = [
 const Address = () => {
   return (
     <div>
-      <Box>
+      <Box mb="100px">
         <Box
           display="flex"
           flexDirection="column"

@@ -1,10 +1,8 @@
 import React from 'react'
 import { Box, Button, Image, Text } from '@chakra-ui/react'
 import Link from 'next/link'
-import { useMediaQuery } from '@chakra-ui/react'
 
 const HeroSection = () => {
-  const [isLessThan768] = useMediaQuery('(max-width: 768px)')
   return (
     <div>
       <Box
@@ -27,7 +25,7 @@ const HeroSection = () => {
       >
         <Box d="flex" w="88%" justifyContent="space-between">
           <Box
-            mt={['83%', '50%', '7%', '10%']}
+            mt={['98%', '50%', '7%', '10%']}
             w={['90%', '80%', '55%', '45%']}
             mb="16px"
           >
@@ -64,7 +62,7 @@ const HeroSection = () => {
                   h={['70px', '50px', '70px', '70px']}
                   bg="#FF9916"
                   borderRadius="10px"
-                  ml={['6%', '0%', '0%', '0%']}
+                  // ml={['6%', '0%', '0%', '0%']}
                 >
                   Get Started
                 </Button>

@@ -33,13 +33,14 @@ const icons = [
 const Footer = () => {
   return (
     <div>
-      <Box>
+      <Box border="1px solid green">
         <Box
-          mt={['150%', '100%', '15%', '10%']}
+          mt={['120px', '65px', '65px', '65px']}
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
+          borderColor="green"
         >
           <Box
             w={['90%', '85%', '85%', '85%']}

@@ -2,16 +2,11 @@ import { Box, Image, Text, Textarea } from '@chakra-ui/react'
 import React from 'react'
 import Buttons from './buttons'
 import TextField from './textField'
-import { useMediaQuery } from '@chakra-ui/react'
+
 import { Formik, useFormik, yupToFormErrors } from 'formik'
 import * as Yup from 'yup'
 
 const ContactUs = () => {
-  const [isGreaterThan750, isLessThan765] = useMediaQuery([
-    '(max-width: 750px)',
-    '(max-width: 765px)',
-  ])
-
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -32,6 +27,7 @@ const ContactUs = () => {
   return (
     <div>
       <Box
+        h="460px"
         position="relative"
         display="flex"
         flexDirection={{
@@ -42,12 +38,12 @@ const ContactUs = () => {
           base: 'column',
         }}
         alignItems="center"
-        mt={['15px', '15px', '90px', '50px']}
+        mt="50px"
       >
         <Box
           bg="#FFF4E7"
           w="70%"
-          paddingY="80px"
+          paddingY="150px"
           display={{
             sm: 'none',
             md: 'block',
@@ -71,11 +67,11 @@ const ContactUs = () => {
             <Image src="./group1.png" />
           </Box>
         </Box>
-
         <Box
           w={['90%', '90%', '55%', '55%']}
           bg="#ffffff"
           position="absolute"
+          bottom={['0', '0', '0', '15%']}
           ml={['0%', '0%', '36%', '36%']}
           display="flex"
           flexDirection="column"
@@ -86,19 +82,26 @@ const ContactUs = () => {
             <Box position="absolute" right="0" top={['16', '20', '0', '0']}>
               <Image src="./group.png" />
             </Box>
-            {isLessThan765 ? (
-              <Box>
-                <Text
-                  fontFamily="DM Serif Display"
-                  fontSize="30px"
-                  fontWeight="400"
-                  color="#000000"
-                  mb="30px"
-                >
-                  Contact Us
-                </Text>
-              </Box>
-            ) : null}
+
+            <Box
+              display={{
+                sm: 'block',
+                md: 'none',
+                lg: 'none',
+                xl: 'none',
+                base: 'block',
+              }}
+            >
+              <Text
+                fontFamily="DM Serif Display"
+                fontSize="30px"
+                fontWeight="400"
+                color="#000000"
+                mb="30px"
+              >
+                Contact Us
+              </Text>
+            </Box>
 
             <Text
               bg="#ffffff"
