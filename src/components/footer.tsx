@@ -56,7 +56,7 @@ const Footer = () => {
             flexWrap="wrap"
           >
             <Box display="flex">
-              <Box mr="46px" ml={['0px', '50px', '0px', '0px']}>
+              <Box mr="40px" ml={['0px', '50px', '0px', '0px']}>
                 <Text
                   fontFamily="Montserrat"
                   fontSize="14px"
@@ -83,7 +83,7 @@ const Footer = () => {
                   })}
                 </Box>
               </Box>
-              <Box mr="46px" ml={['0px', '50px', '0px', '0px']}>
+              <Box mr="40px" ml={['0px', '50px', '0px', '0px']}>
                 <Text
                   fontFamily="Montserrat"
                   fontSize="14px"

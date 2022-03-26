@@ -28,31 +28,42 @@ const NavBar = () => {
           justifyContent="space-between"
         >
           {/* Hamburger Menu */}
-          {isLessThan900 ? (
-            <Box maxWidth="40px" cursor="pointer" height="40px" mt="22px">
-              <Box
-                w="40px"
-                h="2px"
-                bg="#212121"
-                borderRadius="10px"
-                mb="8px"
-              ></Box>
-              <Box
-                w="40px"
-                h="2px"
-                bg="#212121"
-                borderRadius="10px"
-                mb="8px"
-              ></Box>
-              <Box
-                w="40px"
-                h="2px"
-                bg="#212121"
-                borderRadius="10px"
-                mb="8px"
-              ></Box>
-            </Box>
-          ) : null}
+          {/* {isLessThan900 ? () : null} */}
+          <Box
+            maxWidth="40px"
+            cursor="pointer"
+            height="40px"
+            mt="22px"
+            display={{
+              sm: 'block',
+              md: 'block',
+              lg: 'none',
+              xl: 'none',
+              base: 'block',
+            }}
+          >
+            <Box
+              w="40px"
+              h="2px"
+              bg="#212121"
+              borderRadius="10px"
+              mb="8px"
+            ></Box>
+            <Box
+              w="40px"
+              h="2px"
+              bg="#212121"
+              borderRadius="10px"
+              mb="8px"
+            ></Box>
+            <Box
+              w="40px"
+              h="2px"
+              bg="#212121"
+              borderRadius="10px"
+              mb="8px"
+            ></Box>
+          </Box>
 
           {/* Hamburger Menu */}
 
@@ -93,20 +104,18 @@ const NavBar = () => {
               base: 'none',
             }}
           >
-            <Link href="/userdetails">
-              <Button
-                w="142px"
-                h="48px"
-                fontFamily="montserrat"
-                fontSize="16px"
-                fontWeight="500"
-                color="#ffffff"
-                bg="#FF9916"
-                _focus={{ boxShadow: 'none' }}
-              >
-                Get Started
-              </Button>
-            </Link>
+            <Button
+              w="142px"
+              h="48px"
+              fontFamily="montserrat"
+              fontSize="16px"
+              fontWeight="500"
+              color="#ffffff"
+              bg="#FF9916"
+              _focus={{ boxShadow: 'none' }}
+            >
+              Get Started
+            </Button>
           </Box>
           <Box
             display={{
