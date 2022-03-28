@@ -148,7 +148,6 @@ const NavBar = () => {
           position="fixed"
           top="0"
           left="0"
-          display="flex"
           flexDirection="column"
           alignItems="center"
           overflowY="auto"
