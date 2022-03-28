@@ -33,7 +33,7 @@ const icons = [
 const Footer = () => {
   return (
     <div>
-      <Box border="1px solid green">
+      <Box>
         <Box
           mt={['120px', '65px', '65px', '65px']}
           display="flex"

@@ -1,5 +1,10 @@
-import { Box, Button, Flex, Image } from '@chakra-ui/react'
+import React from 'react'
+import { CloseIcon } from '@chakra-ui/icons'
+import { Box, Button, Flex, IconButton, Image } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useState } from 'react'
+import { useControllableProp, useControllableState } from '@chakra-ui/react'
+
 const menuLinks = [
   {
     link: 'Home',
@@ -14,7 +19,12 @@ const menuLinks = [
     link: 'HT Routes',
   },
 ]
+const testProp = {
+  bg: 'red',
+}
 const NavBar = () => {
+  const [display, changeDisplay] = useState('none')
+  const [value, setValue] = useControllableState({})
   return (
     <div>
       <Box display="flex" flexDirection="column" alignItems="center">
@@ -25,11 +35,13 @@ const NavBar = () => {
           alignItems="center"
           justifyContent="space-between"
         >
+          {/* hamburger menu */}
           <Box
             maxWidth="40px"
             cursor="pointer"
             height="40px"
             mt="22px"
+            bg={testProp}
             display={{
               sm: 'block',
               md: 'block',
@@ -37,27 +49,30 @@ const NavBar = () => {
               xl: 'none',
               base: 'block',
             }}
+            onClick={() => changeDisplay('flex')}
           >
             <Box
               w="40px"
               h="2px"
               bg="#212121"
               borderRadius="10px"
-              mb="8px"
+              mb="4px"
+              transform="translateY(-4px)"
             ></Box>
             <Box
               w="40px"
               h="2px"
               bg="#212121"
               borderRadius="10px"
-              mb="8px"
+              mb="4px"
             ></Box>
             <Box
               w="40px"
               h="2px"
               bg="#212121"
               borderRadius="10px"
-              mb="8px"
+              mb="4px"
+              transform="translateY(4px)"
             ></Box>
           </Box>
 
@@ -125,7 +140,49 @@ const NavBar = () => {
             <Box></Box>
           </Box>
         </Box>
-        <Flex></Flex>
+        {/* Responsive menu dropdown */}
+        <Box
+          w="100%"
+          h="100vh"
+          zIndex={20}
+          bg="#FF9916"
+          position="fixed"
+          top="0"
+          left="0"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          overflowY="auto"
+          // display={display}
+          // onClick={() => changeDisplay('none')}
+        >
+          {/* <Flex ml="auto">
+            <IconButton
+              mt={2}
+              mr={2}
+              size="lg"
+              aria-label="Close Menu"
+              icon={<CloseIcon />}
+            />
+          </Flex> */}
+          <Flex direction="column">
+            {menuLinks.map((menu, index) => {
+              return (
+                <Box
+                  key={index}
+                  as="button"
+                  mb="10px"
+                  color="#ffffff"
+                  fontFamily="montserrat"
+                  fontSize={['14px', '14px', '16px', '16px']}
+                  fontWeight="600"
+                >
+                  {menu.link}
+                </Box>
+              )
+            })}
+          </Flex>
+        </Box>
       </Box>
     </div>
   )
