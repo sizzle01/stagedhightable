@@ -24,7 +24,7 @@ const testProp = {
 }
 const NavBar = () => {
   const [display, changeDisplay] = useState('none')
-  const [value, setValue] = useControllableState({})
+
   return (
     <div>
       <Box display="flex" flexDirection="column" alignItems="center">
@@ -41,7 +41,6 @@ const NavBar = () => {
             cursor="pointer"
             height="40px"
             mt="22px"
-            bg={testProp}
             display={{
               sm: 'block',
               md: 'block',
@@ -142,7 +141,7 @@ const NavBar = () => {
         </Box>
         {/* Responsive menu dropdown */}
         <Box
-          w="100%"
+          w="70%"
           h="100vh"
           zIndex={20}
           bg="#FF9916"
@@ -153,28 +152,33 @@ const NavBar = () => {
           flexDirection="column"
           alignItems="center"
           overflowY="auto"
-          // display={display}
-          // onClick={() => changeDisplay('none')}
+          display={display}
         >
-          {/* <Flex ml="auto">
+          <Flex mr="auto">
             <IconButton
-              mt={2}
-              mr={2}
-              size="lg"
+              bg="transparent"
+              mt={6}
+              ml={4}
+              h="60px"
+              w="60px"
+              mt="25px"
+              fontSize="30px"
               aria-label="Close Menu"
               icon={<CloseIcon />}
+              onClick={() => changeDisplay('none')}
             />
-          </Flex> */}
-          <Flex direction="column">
+          </Flex>
+          <Flex direction="column" mr="auto" mt={10} ml="18%">
             {menuLinks.map((menu, index) => {
               return (
                 <Box
                   key={index}
+                  py="5px"
                   as="button"
                   mb="10px"
                   color="#ffffff"
                   fontFamily="montserrat"
-                  fontSize={['14px', '14px', '16px', '16px']}
+                  fontSize={['20px', '26px', '16px', '16px']}
                   fontWeight="600"
                 >
                   {menu.link}
