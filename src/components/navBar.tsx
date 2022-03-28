@@ -141,50 +141,59 @@ const NavBar = () => {
         </Box>
         {/* Responsive menu dropdown */}
         <Box
-          w="70%"
-          h="100vh"
-          zIndex={20}
-          bg="#FF9916"
-          position="fixed"
-          top="0"
-          left="0"
-          flexDirection="column"
-          alignItems="center"
-          overflowY="auto"
-          display={display}
+          display={{
+            sm: 'block',
+            md: 'block',
+            lg: 'none',
+            xl: 'none',
+            base: 'block',
+          }}
         >
-          <Flex mr="auto">
-            <IconButton
-              bg="transparent"
-              mt={6}
-              ml={4}
-              h="60px"
-              w="60px"
-              mt="25px"
-              fontSize="30px"
-              aria-label="Close Menu"
-              icon={<CloseIcon />}
-              onClick={() => changeDisplay('none')}
-            />
-          </Flex>
-          <Flex direction="column" mr="auto" mt={10} ml="18%">
-            {menuLinks.map((menu, index) => {
-              return (
-                <Box
-                  key={index}
-                  py="5px"
-                  as="button"
-                  mb="10px"
-                  color="#ffffff"
-                  fontFamily="montserrat"
-                  fontSize={['20px', '26px', '16px', '16px']}
-                  fontWeight="600"
-                >
-                  {menu.link}
-                </Box>
-              )
-            })}
-          </Flex>
+          <Box
+            w="70%"
+            h="100vh"
+            zIndex={20}
+            bg="#FF9916"
+            position="fixed"
+            top="0"
+            left="0"
+            flexDirection="column"
+            alignItems="center"
+            overflowY="auto"
+            display={display}
+          >
+            <Flex mr="auto">
+              <IconButton
+                bg="transparent"
+                ml={4}
+                h="60px"
+                w="60px"
+                mt="25px"
+                fontSize="30px"
+                aria-label="Close Menu"
+                icon={<CloseIcon />}
+                onClick={() => changeDisplay('none')}
+              />
+            </Flex>
+            <Flex direction="column" mt={10}>
+              {menuLinks.map((menu, index) => {
+                return (
+                  <Box
+                    key={index}
+                    py="5px"
+                    as="button"
+                    mb="10px"
+                    color="#ffffff"
+                    fontFamily="montserrat"
+                    fontSize={['20px', '26px', '26px', '16px']}
+                    fontWeight="600"
+                  >
+                    {menu.link}
+                  </Box>
+                )
+              })}
+            </Flex>
+          </Box>
         </Box>
       </Box>
     </div>
