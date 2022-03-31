@@ -9,11 +9,14 @@ import Link from 'next/link'
 const BusinessInfo = () => {
   const [clickedIndex, setClickedIndex] = useState<any>({})
 
-  const handleClick = (index: any) => () => {
+  const handleClick = (index: any, ) => () => {
     setClickedIndex((state: any) => ({
       [index as any]: !state[index],
     }))
   }
+  // onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+  //   console.warn('onChange TextInput value: ' + e.target.value);
+  // }}
 
   return (
     <div>

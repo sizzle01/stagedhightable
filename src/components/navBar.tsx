@@ -4,6 +4,7 @@ import { Box, Button, Flex, IconButton, Image } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useControllableProp, useControllableState } from '@chakra-ui/react'
+import Buttons from './buttons'
 
 const menuLinks = [
   {
@@ -139,7 +140,7 @@ const NavBar = () => {
             <Box></Box>
           </Box>
         </Box>
-        {/* Responsive menu dropdown */}
+        {/* Responsive menu */}
         <Box
           display={{
             sm: 'block',
@@ -150,42 +151,51 @@ const NavBar = () => {
           }}
         >
           <Box
-            w="70%"
+            w="100%"
             h="100vh"
             zIndex={20}
-            bg="#FF9916"
+            bg="#ffffff"
             position="fixed"
             top="0"
             left="0"
             flexDirection="column"
-            alignItems="center"
             overflowY="auto"
             display={display}
           >
-            <Flex mr="auto">
-              <IconButton
-                bg="transparent"
-                ml={4}
-                h="60px"
-                w="60px"
-                mt="25px"
-                fontSize="30px"
-                aria-label="Close Menu"
-                icon={<CloseIcon />}
-                onClick={() => changeDisplay('none')}
-              />
+            <Flex alignItems="center" justifyContent="space-between" mt="6px">
+              <Box></Box>
+              <Box w="30%" ml="40px">
+                <Image src="./brandlogo.png" alt="logo" width="100%" />
+              </Box>
+              <Box>
+                <IconButton
+                  bg="transparent"
+                  h="60px"
+                  w="60px"
+                  fontSize="18px"
+                  aria-label="Close Menu"
+                  icon={<CloseIcon />}
+                  onClick={() => changeDisplay('none')}
+                />
+              </Box>
             </Flex>
-            <Flex direction="column" mt={10}>
+            <Flex
+              direction="column"
+              alignItems="flex-start"
+              w="100%"
+              mt={10}
+              ml="30px"
+            >
               {menuLinks.map((menu, index) => {
                 return (
                   <Box
                     key={index}
                     py="5px"
                     as="button"
-                    mb="10px"
-                    color="#ffffff"
+                    mb="50px"
+                    color="#666670"
                     fontFamily="montserrat"
-                    fontSize={['20px', '26px', '26px', '16px']}
+                    fontSize={['18px', '20x', '26px', '16px']}
                     fontWeight="600"
                   >
                     {menu.link}
@@ -193,6 +203,22 @@ const NavBar = () => {
                 )
               })}
             </Flex>
+            <Box
+              w="100%"
+              mt="100px"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Buttons
+                color="#ffffff"
+                background="#FF9916"
+                description="Get Started"
+                width="70%"
+                height="50px"
+                fontFamily="montserrat"
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
