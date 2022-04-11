@@ -20,15 +20,21 @@ const menuLinks = [
     link: 'HT Routes',
   },
 ]
-const testProp = {
-  bg: 'red',
-}
+
 const NavBar = () => {
   const [display, changeDisplay] = useState('none')
 
   return (
     <div>
-      <Box display="flex" flexDirection="column" alignItems="center">
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        boxShadow={{
+          base: ' boxShadow="0px 2px 4px rgba(0, 0, 0, 0.15)',
+          sm: ' boxShadow="0px 2px 4px rgba(0, 0, 0, 0.15)',
+        }}
+      >
         <Box
           w={['90%', '90%', '90%', '84%']}
           h="100px"

@@ -104,10 +104,9 @@ const BusinessSpeciality: React.FC<BusinessSpecialtyProps> = () => {
                           borderRadius="50%"
                           position="absolute"
                           left="94%"
-                          bottom={['170%', '170%', '170%', '130%']}
+                          bottom={['110%', '140%', '120%', '130%']}
                         />
                       ) : null}
-
                       <Image
                         src={special.icon}
                         alt="icon"

@@ -7,12 +7,15 @@ import ProgressBar from './progressBar'
 import Link from 'next/link'
 
 const BusinessInfo = () => {
-  const [clickedIndex, setClickedIndex] = useState<any>({})
+  const [clickedIndex, setClickedIndex] = useState<any>('')
 
-  const handleClick = (index: any, ) => () => {
-    setClickedIndex((state: any) => ({
+  const handleClick = (index: any) => () => {
+    const value = e.target
+    setClickedIndex((state: any, e: any) => ({
       [index as any]: !state[index],
+      [value as any]: value[index],
     }))
+    console.log(e.target.value)
   }
   // onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
   //   console.warn('onChange TextInput value: ' + e.target.value);
@@ -158,18 +161,18 @@ const BusinessInfo = () => {
           </Grid>
 
           <Box mt="67px" mx="auto">
-            <Link href="/businesssocials">
-              <Buttons
-                type="submit"
-                color="#ffffff"
-                width="180px"
-                height="65px"
-                fontSize="14px"
-                fontFamily="montserrat"
-                description="Proceed"
-                background="#FF9916"
-              />
-            </Link>
+            {/* <Link href="/businesssocials"> */}
+            <Buttons
+              type="submit"
+              color="#ffffff"
+              width="180px"
+              height="65px"
+              fontSize="14px"
+              fontFamily="montserrat"
+              description="Proceed"
+              background="#FF9916"
+            />
+            {/* </Link> */}
           </Box>
         </Box>
       </Box>
