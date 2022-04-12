@@ -9,16 +9,16 @@ const Layout = (props) => {
         <link rel="shortcut icon" href="/favicon.ico.png" />
         <meta
           property="og:url"
-          content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html"
+          content="http://hightablebusiness.herokuapp.com/"
         />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="When Great Minds Don’t Think Alike"
+          content="we are all about hospitality and growing businesses"
         />
         <meta
           property="og:description"
-          content="How much does culture influence creative thinking?"
+          content="HighTable is a platform for millennials and Gen Zs to discover and connect with fun adventures around and beyond them"
         />
         <meta
           property="og:image"
