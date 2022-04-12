@@ -103,7 +103,7 @@ const SideMenu = () => {
           <Flex flexDir="column" w="100%" bg="blue">
             {menuItems.map((menu, index) => {
               return (
-                <Link href="#" h="40px" mb="10px" bg="red">
+                <Link key={index} href="#" h="40px" mb="10px" bg="red">
                   <Box
                     bg="yellow"
                     key={index}

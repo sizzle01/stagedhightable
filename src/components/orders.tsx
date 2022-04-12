@@ -61,11 +61,12 @@ const Orders = () => {
                 {tableHeader.map((head, index) => {
                   return (
                     <Th
+                      key={index}
                       fontFamily="Montserrat"
                       fontWeight="700"
                       fontSize="12px"
                       color="#030303 "
-                      isNumeric={head.numeric}
+                      // isNumeric={head.numeric}
                     >
                       {head.tableHead}
                     </Th>
@@ -76,7 +77,7 @@ const Orders = () => {
             <Tbody>
               {tableData.map((data, index) => {
                 return (
-                  <Tr>
+                  <Tr key={index}>
                     <Td>
                       <Flex alignItems="center">
                         <Image src="./orderitem.png" alt="order item" />

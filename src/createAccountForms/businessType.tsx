@@ -10,12 +10,10 @@ const BusinessInfo = () => {
   const [clickedIndex, setClickedIndex] = useState<any>('')
 
   const handleClick = (index: any) => () => {
-    const value = e.target
     setClickedIndex((state: any, e: any) => ({
       [index as any]: !state[index],
-      [value as any]: value[index],
+      // [value as any]: value[index],
     }))
-    console.log(e.target.value)
   }
   // onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
   //   console.warn('onChange TextInput value: ' + e.target.value);
