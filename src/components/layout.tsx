@@ -9,21 +9,20 @@ const Layout = (props) => {
         <link rel="shortcut icon" href="/favicon.ico.png" />
         <meta
           property="og:url"
-          content="http://hightablebusiness.herokuapp.com/"
+          content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html"
         />
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="we are all about hospitality and growing your business"
+          content="When Great Minds Don’t Think Alike"
         />
         <meta
           property="og:description"
-          content="Stop wasting time money designing and more other option"
+          content="How much does culture influence creative thinking?"
         />
-
         <meta
           property="og:image"
-          content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hightableafrica.com%2F&psig=AOvVaw35Ia-VzSLb4Q_njM8nmUhu&ust=1649811373625000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCLj0_P2pjfcCFQAAAAAdAAAAABAG"
+          content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
         />
       </Head>
       <main>{props.children}</main>
