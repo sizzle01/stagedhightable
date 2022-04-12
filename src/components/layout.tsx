@@ -14,11 +14,11 @@ const Layout = (props) => {
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="When Great Minds Don’t Think Alike"
+          content="we are all about hospitality and growing your business"
         />
         <meta
           property="og:description"
-          content="How much does culture influence creative thinking?"
+          content="Stop wasting time money designing and more other option"
         />
         <meta
           property="og:image"
