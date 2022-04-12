@@ -22,7 +22,7 @@ const Layout = (props) => {
         />
         <meta
           property="og:image"
-          content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+          content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hightableafrica.com%2F&psig=AOvVaw35Ia-VzSLb4Q_njM8nmUhu&ust=1649811373625000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCLj0_P2pjfcCFQAAAAAdAAAAABAG"
         />
       </Head>
       <main>{props.children}</main>
