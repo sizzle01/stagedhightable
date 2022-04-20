@@ -31,3 +31,26 @@ const Layout = (props) => {
 }
 
 export default Layout
+
+// const meta = {
+//   title: 'HighTable',
+//   description:
+//     "HighTable is a platform for millennials and Gen Zs to discover and connect with fun adventures around and beyond them. HighTable is breaking the borders around Africa's hospitality one connection at a time.",
+//   // url: 'https://www.hightable.africa',
+//   type: 'website',
+//   ...pageMeta,
+// };
+// <Head>
+// <title></title>
+// <link rel="icon" href="/logo1.jpg" />
+// <link rel="shortcut icon" href="/favicon.ico.png" />
+// <meta name="description" content={meta.description} key="title" />
+// <meta property="og:url" content="https://www.hightable.africa" key="url" />
+// <meta property="og:type" content={meta.type} key="og:type" />
+// <meta property="og:title" content={meta.title} key="og:title" />
+// <meta property="og:description" content={meta.description} key="og:description" />
+// <meta
+//   property="og:image"
+//   content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+// />
+// </Head>
