@@ -7,11 +7,11 @@ import Layout from '../components/layout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider resetCSS theme={myTheme}>
-      <Layout>
+    <>
+      <ChakraProvider resetCSS theme={myTheme}>
         <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+      </ChakraProvider>
+    </>
   )
 }
 
