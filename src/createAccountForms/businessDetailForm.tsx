@@ -38,7 +38,7 @@ const BusinessDetailForm = () => {
     }),
     onSubmit: (values) => {},
   })
-  console.log(formik.initialValues.businessName)
+
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
